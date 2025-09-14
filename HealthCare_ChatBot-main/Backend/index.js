@@ -8,7 +8,10 @@ const app = express();
 // Middleware Configuration
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://hariharan1022.github.io"
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   })
